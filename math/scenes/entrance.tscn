@@ -1,0 +1,130 @@
+[gd_scene load_steps=6 format=3 uid="uid://bt14kxtxmoeh8"]
+
+[ext_resource type="Script" uid="uid://cx8lun5hp8uf4" path="res://scripts/entrance.gd" id="1_kwwjj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ngk8"]
+bg_color = Color(1, 1, 0, 1)
+
+[sub_resource type="Gradient" id="Gradient_kwwjj"]
+colors = PackedColorArray(0.683077, 0.683077, 0.683077, 1, 1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kwwjj"]
+bg_color = Color(0.190762, 0.190762, 0.190762, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ba6v0"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="entrance" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kwwjj")
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.012
+offset_right = 2.0
+offset_bottom = 0.223938
+theme_override_styles/focus = SubResource("StyleBoxFlat_6ngk8")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_6ngk8")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_6ngk8")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_6ngk8")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_6ngk8")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_6ngk8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6ngk8")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_6ngk8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6ngk8")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_6ngk8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6ngk8")
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.832
+anchor_top = 0.707
+anchor_right = 0.845
+anchor_bottom = 0.733
+offset_left = 1.53601
+offset_top = 5.86398
+offset_right = 1.534
+offset_bottom = 5.80798
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Button4"]
+position = Vector2(6, 2)
+amount = 16
+randomness = 1.0
+draw_order = 1
+spread = 169.05
+gravity = Vector2(-980, -980)
+initial_velocity_min = 256.76
+initial_velocity_max = 432.43
+scale_amount_min = 0.0
+scale_amount_max = 177.12
+color_ramp = SubResource("Gradient_kwwjj")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+anim_speed_max = 128.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.088
+anchor_top = 0.168
+anchor_right = 0.481
+anchor_bottom = 0.389
+offset_left = -0.376007
+offset_top = 0.135994
+offset_right = -0.112061
+offset_bottom = -0.0720215
+theme_override_font_sizes/font_size = 80
+theme_override_styles/focus = SubResource("StyleBoxFlat_kwwjj")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_ba6v0")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ba6v0")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_kwwjj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kwwjj")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_kwwjj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kwwjj")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_kwwjj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kwwjj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ba6v0")
+text = "Lessons"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.088
+anchor_top = 0.586
+anchor_right = 0.481
+anchor_bottom = 0.807
+offset_left = -0.376007
+offset_top = 0.271973
+offset_right = -0.112061
+offset_bottom = 0.0639648
+theme_override_font_sizes/font_size = 80
+theme_override_styles/focus = SubResource("StyleBoxFlat_kwwjj")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_ba6v0")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ba6v0")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_kwwjj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kwwjj")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_kwwjj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kwwjj")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_kwwjj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kwwjj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ba6v0")
+text = "Execise"
+
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
+[connection signal="button_up" from="Button2" to="." method="_on_button_2_button_up"]
